@@ -19,8 +19,16 @@ jobs:
       with:
         node-version: 24
 
+    # Adicione esta linha para mudar para o diretório correto
+    - name: Navegar para o diretório do projeto
+      run: cd 03-Git_e_GitHub_com_foco_em_DevOps/allbooks-aula-01
+
     - name: Instalar dependências
+      # Especifique o working-directory
+      working-directory: ./03-Git_e_GitHub_com_foco_em_DevOps/allbooks-aula-01
       run: npm install
 
     - name: Executar testes
+      # Especifique o working-directory novamente
+      working-directory: ./03-Git_e_GitHub_com_foco_em_DevOps/allbooks-aula-01
       run: npm test
