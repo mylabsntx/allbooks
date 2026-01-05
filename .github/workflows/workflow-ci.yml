@@ -20,5 +20,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: 24.
-    - run: npm install
-    - run: npm test
+    - name: Run npm install
+      working-directory: /home/devops/alura_cursos/Comecando_em_DevOps/03-Git_e_GitHub_com_foco_em_DevOps/allbooks-aula-01
+      run: npm install
+
+    - name: Run npm test
+      working-directory: /home/devops/alura_cursos/Comecando_em_DevOps/03-Git_e_GitHub_com_foco_em_DevOps/allbooks-aula-01
+      run: npm test   
